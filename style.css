@@ -1,237 +1,139 @@
-/* استيراد الخطوط من Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-/* إعدادات أساسية لكل العناصر في الصفحة */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    /* استخدام خط Poppins في الصفحة */
 }
 
-/* تنسيق جسم الصفحة */
 body {
     display: flex;
-    /* استخدام flexbox لتوسيط العناصر داخل الجسم */
     justify-content: center;
-    /* محاذاة المحتوى أفقياً في المنتصف */
     align-items: center;
-    /* محاذاة المحتوى عمودياً في المنتصف */
     min-height: 100vh;
-    /* تعيين الحد الأدنى للارتفاع ليغطي الشاشة بالكامل */
     background: url(home.webp);
-    /* خلفية مضافة */
     background-size: cover;
-    /* جعل الخلفية تغطي المساحة بالكامل */
     background-position: center;
-    /* محاذاة الخلفية في المنتصف */
 }
 
-/* تنسيق العنصر الرئيسي (النموذج) */
 .wrapper {
     width: 420px;
-    /* تحديد عرض النموذج */
     background: transparent;
-    /* خلفية شفافة */
     backdrop-filter: blur(20px);
-    /* إضافة تأثير ضبابي على الخلفية */
     border: 2px solid rgba(255, 255, 255, 0.2);
-    /* إطار أبيض شفاف */
     color: #fff;
-    /* تغيير لون النص إلى الأبيض */
     border-radius: 20px;
-    /* إضافة زوايا مستديرة للنموذج */
     padding: 40px 35px;
-    /* إضافة الحشو حول المحتوى */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    /* إضافة ظل للنموذج */
 }
 
-/* تنسيق العنوان داخل النموذج */
 .wrapper h1 {
     font-size: 38px;
-    /* حجم الخط للعناوين */
     text-align: center;
-    /* محاذاة العنوان في المنتصف */
     margin-bottom: 30px;
-    /* إضافة مسافة تحت العنوان */
     font-weight: 700;
-    /* جعل الخط ثقيل */
 }
 
-/* تنسيق الحقول النصية */
 .input-box {
     position: relative;
-    /* لتحديد مكان الأيقونة داخل الحقل */
     width: 100%;
-    /* عرض الحقل 100% */
     margin-bottom: 25px;
-    /* مسافة تحت كل حقل */
 }
 
-/* تنسيق الحقول النصية (الإدخال) */
 .input-box input {
     width: 100%;
-    /* عرض الحقل بالكامل */
     height: 50px;
-    /* ارتفاع الحقل */
     background: transparent;
-    /* خلفية شفافة */
     border: 2px solid rgba(255, 255, 255, 0.3);
-    /* تحديد حدود الحقل بلون شفاف */
     border-radius: 30px;
-    /* زوايا مستديرة */
     font-size: 15px;
-    /* حجم الخط داخل الحقل */
     color: #fff;
-    /* لون النص أبيض */
     padding: 0 50px 0 20px;
-    /* إضافة حشو داخل الحقل */
     outline: none;
-    /* إزالة الإطار عند التركيز */
     transition: all 0.3s ease;
-    /* تأثير انتقال عند التفاعل مع الحقل */
 }
 
-/* تنسيق الحقل عند التركيز عليه */
 .input-box input:focus {
     border-color: #fff;
-    /* تغيير اللون عند التركيز */
     background: rgba(255, 255, 255, 0.1);
-    /* تغيير الخلفية عند التركيز */
 }
 
-/* تنسيق النص في مكان النص داخل الحقل */
 .input-box input::placeholder {
     color: rgba(255, 255, 255, 0.6);
-    /* تغيير لون النص في مكان النص */
 }
 
-/* تنسيق الأيقونات داخل الحقول */
 .input-box i {
     position: absolute;
-    /* وضع الأيقونة بشكل مطلق داخل الحقل */
     right: 20px;
-    /* تحديد المسافة من اليمين */
     top: 50%;
-    /* محاذاة الأيقونة عمودياً */
     transform: translateY(-50%);
-    /* جعل الأيقونة في المنتصف عمودياً */
     font-size: 20px;
-    /* حجم الأيقونة */
     color: rgba(255, 255, 255, 0.8);
-    /* لون الأيقونة */
 }
 
-/* تنسيق الروابط والتذكير */
 .remember-forgot {
     display: flex;
-    /* استخدام flexbox لتوزيع العناصر */
     justify-content: space-between;
-    /* توزيع العناصر على أطراف المساحة */
     align-items: center;
-    /* محاذاة العناصر عمودياً في المنتصف */
     font-size: 13px;
-    /* تصغير حجم الخط */
     margin-bottom: 20px;
-    /* إضافة مسافة أسفل هذا القسم */
 }
 
-/* تنسيق مربع التذكير */
 .remember-forgot label {
     display: flex;
-    /* عرض مربع التذكير كنموذج flexbox */
     align-items: center;
-    /* محاذاة العناصر عمودياً */
     gap: 5px;
-    /* إضافة مسافة بين العناصر */
 }
 
-/* تنسيق مربع الاختيار */
 .remember-forgot input[type="checkbox"] {
     accent-color: #fff;
-    /* تغيير اللون الخاص بالمربع إلى الأبيض */
     transform: scale(1.1);
-    /* تكبير حجم مربع الاختيار */
     cursor: pointer;
-    /* تغيير المؤشر عند التمرير على المربع */
 }
 
-/* تنسيق الروابط (نسيت كلمة المرور) */
 .remember-forgot a {
     color: #fff;
-    /* تغيير لون الرابط إلى الأبيض */
     text-decoration: none;
-    /* إزالة التسطير من الرابط */
     transition: color 0.3s ease;
-    /* تأثير الانتقال عند التفاعل مع الرابط */
 }
 
-/* تأثير التمرير على الرابط */
 .remember-forgot a:hover {
     color: #FFD700;
-    /* تغيير اللون إلى الذهبي عند التمرير */
     text-decoration: underline;
-    /* إضافة تسطير عند التمرير */
 }
 
-/* تنسيق الزر */
 .btn {
     width: 100%;
-    /* جعل الزر يشغل عرض النموذج بالكامل */
     height: 50px;
-    /* تحديد ارتفاع الزر */
     background: #fff;
-    /* خلفية الزر باللون الأبيض */
     color: #6A1B9A;
-    /* تغيير لون النص داخل الزر */
     font-size: 17px;
-    /* حجم الخط داخل الزر */
     font-weight: 600;
-    /* جعل النص ثقيل */
     border: none;
-    /* إزالة الحدود */
     border-radius: 30px;
-    /* جعل الزر بزوايا مستديرة */
     cursor: pointer;
-    /* تغيير المؤشر عند التمرير على الزر */
     transition: background 0.3s ease, color 0.3s ease;
-    /* تأثيرات عند التفاعل مع الزر */
 }
 
-/* تأثير التمرير على الزر */
 .btn:hover {
     background: #D1C4E9;
-    /* تغيير الخلفية عند التمرير */
     color: #4A0072;
-    /* تغيير اللون إلى البنفسجي عند التمرير */
 }
 
-/* تنسيق الرابط الخاص بالتسجيل */
 .register-link {
     font-size: 13px;
-    /* تصغير حجم الخط */
     text-align: center;
-    /* محاذاة النص في المنتصف */
     margin-top: 20px;
-    /* إضافة مسافة أعلى الرابط */
 }
 
-/* تنسيق الرابط داخل قسم التسجيل */
 .register-link a {
     color: #fff;
-    /* تغيير لون الرابط إلى الأبيض */
     font-weight: 600;
-    /* جعل النص ثقيل */
     text-decoration: none;
-    /* إزالة التسطير من الرابط */
     transition: color 0.3s ease;
-    /* تأثير الانتقال عند التفاعل مع الرابط */
 }
 
-/* تأثير التمرير على الرابط */
 .register-link a:hover {
     color: #FFD700;
-    /* تغيير اللون إلى الذهبي عند التمرير */
 }
